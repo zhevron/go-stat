@@ -1,0 +1,15 @@
+box: google/golang
+
+build:
+  steps:
+    - setup-go-workspace
+    - golint
+    - script:
+        name: go get
+        code: go get -t -v ./...
+    - script:
+        name: go build
+        code: go build -a -v ./...
+    - script:
+        name: go test
+        code: go test -v ./...
