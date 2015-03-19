@@ -21,7 +21,7 @@ func Memory() (MemInfo, error) {
 
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
-		fields := strings.Fields(scanner.Tex())
+		fields := strings.Fields(scanner.Text())
 
 		if len(fields) >= 3 {
 			key := fields[0][:len(fields[0])-1]
@@ -52,7 +52,7 @@ func Memory() (MemInfo, error) {
 func convertUnit(val int64, unit string) int64 {
 	unit = strings.ToLower(unit)
 
-	switch {
+	switch unit {
 	case "kb":
 		return val * 1024
 
