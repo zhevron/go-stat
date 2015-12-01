@@ -10,6 +10,7 @@ It reads system metrics like CPU load, memory usage and network usage.
 
 For package documentation, refer to the GoDoc badge above.
 
+
 ## Installation
 
 ```
